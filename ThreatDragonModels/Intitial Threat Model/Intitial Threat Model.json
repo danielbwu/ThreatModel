@@ -19,12 +19,12 @@
         "cells": [
           {
             "position": {
-              "x": 89.99999999999932,
-              "y": 50.0000000000005
+              "x": -90.000000000001,
+              "y": 50
             },
             "size": {
-              "width": 160,
-              "height": 150
+              "width": 340,
+              "height": 360
             },
             "shape": "trust-boundary-box",
             "attrs": {
@@ -44,8 +44,8 @@
           },
           {
             "position": {
-              "x": 240,
-              "y": 540
+              "x": 360,
+              "y": 455
             },
             "size": {
               "width": 230,
@@ -183,51 +183,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "3506d326-178d-406f-a3f5-d88c3c3d9ba0",
-            "source": {
-              "cell": "81c2a3be-59ad-4a93-a427-86183d47a9ee"
-            },
-            "target": {
-              "cell": "7e100f3f-4c87-4f22-93eb-e4fe5b0a358e"
-            },
-            "vertices": [
-              {
-                "x": 310,
-                "y": 100
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Credentials",
               "description": "",
               "outOfScope": false,
@@ -329,7 +284,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Web Request",
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
@@ -352,12 +307,63 @@
                 "x": 310,
                 "y": 180
               }
+            ],
+            "labels": [
+              "Web Request"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web Response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "3506d326-178d-406f-a3f5-d88c3c3d9ba0",
+            "source": {
+              "cell": "81c2a3be-59ad-4a93-a427-86183d47a9ee"
+            },
+            "target": {
+              "cell": "7e100f3f-4c87-4f22-93eb-e4fe5b0a358e"
+            },
+            "vertices": [
+              {
+                "x": 310,
+                "y": 100
+              }
+            ],
+            "labels": [
+              "Web Response"
             ]
           },
           {
             "position": {
-              "x": 295,
-              "y": 635
+              "x": 380,
+              "y": 550
             },
             "size": {
               "width": 120,
