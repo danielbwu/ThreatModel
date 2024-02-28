@@ -24,7 +24,7 @@
             },
             "size": {
               "width": 250,
-              "height": 180
+              "height": 160
             },
             "shape": "trust-boundary-box",
             "attrs": {
@@ -44,8 +44,8 @@
           },
           {
             "position": {
-              "x": 760,
-              "y": 80
+              "x": 880,
+              "y": 35
             },
             "size": {
               "width": 230,
@@ -385,9 +385,109 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Query \nPasswords",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "6c17462a-bf5f-4fe9-869f-83201aae1f8a",
+            "source": {
+              "cell": "865a46cb-f8fb-400d-a185-c23f3ec03971"
+            },
+            "target": {
+              "cell": "1ae71de3-41f4-41c4-8c31-eb0026eefbf9"
+            },
+            "labels": [
+              "Query \nPasswords"
+            ],
+            "vertices": [
+              {
+                "x": 700,
+                "y": 390
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Query Response",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "567e94b9-4fa9-4f05-817c-5819ab4acaab",
+            "source": {
+              "cell": "1ae71de3-41f4-41c4-8c31-eb0026eefbf9"
+            },
+            "target": {
+              "cell": "865a46cb-f8fb-400d-a185-c23f3ec03971"
+            },
+            "vertices": [
+              {
+                "x": 710,
+                "y": 290
+              },
+              {
+                "x": 610,
+                "y": 351
+              }
+            ],
+            "labels": [
+              "Query Response"
+            ]
+          },
+          {
             "position": {
-              "x": 815,
-              "y": 130
+              "x": 810,
+              "y": 285
             },
             "size": {
               "width": 120,
