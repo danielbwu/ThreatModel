@@ -19,12 +19,12 @@
         "cells": [
           {
             "position": {
-              "x": -90.000000000001,
-              "y": 50
+              "x": 69.99999999999875,
+              "y": 49.99999999999943
             },
             "size": {
-              "width": 340,
-              "height": 360
+              "width": 250,
+              "height": 180
             },
             "shape": "trust-boundary-box",
             "attrs": {
@@ -44,8 +44,8 @@
           },
           {
             "position": {
-              "x": 360,
-              "y": 455
+              "x": 760,
+              "y": 80
             },
             "size": {
               "width": 230,
@@ -69,12 +69,12 @@
           },
           {
             "position": {
-              "x": 270,
-              "y": 50.00000000000034
+              "x": 329.99999999999926,
+              "y": 50.00000000000068
             },
             "size": {
-              "width": 360,
-              "height": 360
+              "width": 240,
+              "height": 160
             },
             "shape": "trust-boundary-box",
             "attrs": {
@@ -94,7 +94,32 @@
           },
           {
             "position": {
-              "x": 108.75,
+              "x": 329.9999999999992,
+              "y": 260.0000000000001
+            },
+            "size": {
+              "width": 240,
+              "height": 150
+            },
+            "shape": "trust-boundary-box",
+            "attrs": {
+              "headerText": {
+                "text": "Open-Source Authenticator"
+              }
+            },
+            "id": "a622c6e6-9f3b-42f8-a676-cfc530fa4a59",
+            "zIndex": -1,
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "Open-Source Authenticator",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false
+            }
+          },
+          {
+            "position": {
+              "x": 123.749999999999,
               "y": 110
             },
             "size": {
@@ -235,55 +260,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Authentication\nResponse",
-              "description": "",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "ac2be255-415e-45fc-96ba-00f8071bcfa3",
-            "source": {
-              "x": 482,
-              "y": 310
-            },
-            "target": {
-              "cell": "81c2a3be-59ad-4a93-a427-86183d47a9ee"
-            },
-            "vertices": [
-              {
-                "x": 510,
-                "y": 250
-              }
-            ],
-            "labels": [
-              "Authentication\nResponse"
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Web Request",
               "description": "",
               "outOfScope": false,
@@ -304,8 +280,8 @@
             },
             "vertices": [
               {
-                "x": 310,
-                "y": 180
+                "x": 330,
+                "y": 190
               }
             ],
             "labels": [
@@ -352,8 +328,8 @@
             },
             "vertices": [
               {
-                "x": 310,
-                "y": 100
+                "x": 320,
+                "y": 90
               }
             ],
             "labels": [
@@ -361,9 +337,57 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Authentication\nResponse",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "ac2be255-415e-45fc-96ba-00f8071bcfa3",
+            "source": {
+              "cell": "865a46cb-f8fb-400d-a185-c23f3ec03971"
+            },
+            "target": {
+              "cell": "81c2a3be-59ad-4a93-a427-86183d47a9ee"
+            },
+            "vertices": [
+              {
+                "x": 510,
+                "y": 230
+              }
+            ],
+            "labels": [
+              "Authentication\nResponse"
+            ]
+          },
+          {
             "position": {
-              "x": 380,
-              "y": 550
+              "x": 815,
+              "y": 130
             },
             "size": {
               "width": 120,
@@ -420,7 +444,7 @@
           {
             "position": {
               "x": 405,
-              "y": 280
+              "y": 285
             },
             "size": {
               "width": 90,
