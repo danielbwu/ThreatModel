@@ -19,12 +19,12 @@
         "cells": [
           {
             "position": {
-              "x": 89.99999999999946,
-              "y": 50.00000000000034
+              "x": 89.99999999999932,
+              "y": 50.0000000000005
             },
             "size": {
               "width": 160,
-              "height": 180
+              "height": 150
             },
             "shape": "trust-boundary-box",
             "attrs": {
@@ -69,12 +69,12 @@
           },
           {
             "position": {
-              "x": 330,
-              "y": 50.000000000000796
+              "x": 270,
+              "y": 50.00000000000034
             },
             "size": {
-              "width": 330,
-              "height": 260
+              "width": 360,
+              "height": 360
             },
             "shape": "trust-boundary-box",
             "attrs": {
@@ -204,8 +204,109 @@
             "vertices": [
               {
                 "x": 310,
-                "y": 90
+                "y": 100
               }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Credentials",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "3d27d909-8c02-4844-bd00-b6e73e91c688",
+            "source": {
+              "cell": "81c2a3be-59ad-4a93-a427-86183d47a9ee"
+            },
+            "target": {
+              "cell": "865a46cb-f8fb-400d-a185-c23f3ec03971"
+            },
+            "vertices": [
+              {
+                "x": 390,
+                "y": 210
+              },
+              {
+                "x": 390,
+                "y": 250
+              }
+            ],
+            "labels": [
+              "Credentials"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Authentication\nResponse",
+              "description": "",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "ac2be255-415e-45fc-96ba-00f8071bcfa3",
+            "source": {
+              "x": 482,
+              "y": 310
+            },
+            "target": {
+              "cell": "81c2a3be-59ad-4a93-a427-86183d47a9ee"
+            },
+            "vertices": [
+              {
+                "x": 510,
+                "y": 250
+              }
+            ],
+            "labels": [
+              "Authentication\nResponse"
             ]
           },
           {
@@ -241,15 +342,15 @@
             },
             "id": "cb4c25ac-f9e1-4c7e-ab41-e54980962921",
             "source": {
-              "cell": "81c2a3be-59ad-4a93-a427-86183d47a9ee"
+              "cell": "7e100f3f-4c87-4f22-93eb-e4fe5b0a358e"
             },
             "target": {
-              "cell": "7e100f3f-4c87-4f22-93eb-e4fe5b0a358e"
+              "cell": "81c2a3be-59ad-4a93-a427-86183d47a9ee"
             },
             "vertices": [
               {
-                "x": 300,
-                "y": 190
+                "x": 310,
+                "y": 180
               }
             ]
           },
@@ -267,11 +368,13 @@
                 "text": "Database"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -285,19 +388,33 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "66f104e6-046c-4b1f-8c37-dd311047db7c",
+                  "title": "Unauthorized Access",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ]
             }
           },
           {
             "position": {
               "x": 405,
-              "y": 190
+              "y": 280
             },
             "size": {
               "width": 90,
@@ -337,6 +454,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "test",
-    "threatTop": 0
+    "threatTop": 2
   }
 }
