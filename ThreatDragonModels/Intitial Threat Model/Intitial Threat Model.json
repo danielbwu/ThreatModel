@@ -270,58 +270,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Query Response",
-              "description": "Passwords\nUsernames\nNot found",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "567e94b9-4fa9-4f05-817c-5819ab4acaab",
-            "source": {
-              "cell": "1ae71de3-41f4-41c4-8c31-eb0026eefbf9"
-            },
-            "target": {
-              "cell": "865a46cb-f8fb-400d-a185-c23f3ec03971"
-            },
-            "vertices": [
-              {
-                "x": 640,
-                "y": 300
-              },
-              {
-                "x": 550,
-                "y": 320
-              }
-            ],
-            "labels": [
-              "Query Response"
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Query \nPasswords",
               "description": "Check credentials against DB",
               "outOfScope": false,
@@ -348,59 +296,6 @@
                 "x": 680,
                 "y": 351
               }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Query Response",
-              "description": "Message of the Day\nComments",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "4093a440-a670-42fd-8017-66471a9eb56c",
-            "source": {
-              "x": 690,
-              "y": 170
-            },
-            "target": {
-              "cell": "81c2a3be-59ad-4a93-a427-86183d47a9ee"
-            },
-            "vertices": [
-              {
-                "x": 650,
-                "y": 120
-              },
-              {
-                "x": 580,
-                "y": 100
-              }
-            ],
-            "labels": [
-              "Query Response"
             ]
           },
           {
@@ -524,6 +419,82 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
+              "name": "Web Request",
+              "description": "Login credentials\nComment submission",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "6b77a883-8ad6-484a-ac9e-94900a9e231f",
+                  "title": "Injection Attack",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                },
+                {
+                  "id": "551f282f-3cfc-4282-9d7f-af0f94dd0fb8",
+                  "title": "Man-in-the-middle Attack",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Sensitive data, such as credentials, intercepted in transit",
+                  "mitigation": "Encryption",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "cb4c25ac-f9e1-4c7e-ab41-e54980962921",
+            "source": {
+              "cell": "7e100f3f-4c87-4f22-93eb-e4fe5b0a358e"
+            },
+            "target": {
+              "cell": "81c2a3be-59ad-4a93-a427-86183d47a9ee"
+            },
+            "vertices": [
+              {
+                "x": 340,
+                "y": 180
+              }
+            ],
+            "labels": [
+              "Web Request"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
               "name": "Query",
               "description": "Insert comments\nRetrieve comments\nRetrieve message of the day",
               "outOfScope": false,
@@ -582,59 +553,118 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Web Request",
-              "description": "Login credentials\nComment submission",
+              "name": "Query Response",
+              "description": "Passwords\nUsernames\nNot found",
               "outOfScope": false,
               "reasonOutOfScope": "",
               "hasOpenThreats": true,
               "isBidirectional": false,
-              "isEncrypted": true,
+              "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
               "threats": [
                 {
-                  "id": "6b77a883-8ad6-484a-ac9e-94900a9e231f",
-                  "title": "Injection Attack",
-                  "status": "Open",
-                  "severity": "Medium",
-                  "type": "Tampering",
-                  "description": "Provide a description for this threat",
-                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
-                  "modelType": "STRIDE",
-                  "new": false,
-                  "number": 6,
-                  "score": ""
-                },
-                {
-                  "id": "551f282f-3cfc-4282-9d7f-af0f94dd0fb8",
+                  "id": "78878536-4bea-4b75-9050-f7e950e37436",
                   "title": "Man-in-the-middle Attack",
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Information disclosure",
-                  "description": "Sensitive data, such as credentials, intercepted in transit",
-                  "mitigation": "Encryption",
+                  "description": "Intercepting credentials",
+                  "mitigation": "Encryption/Hashing",
                   "modelType": "STRIDE",
                   "new": false,
-                  "number": 9,
+                  "number": 10,
                   "score": ""
                 }
               ]
             },
-            "id": "cb4c25ac-f9e1-4c7e-ab41-e54980962921",
+            "id": "567e94b9-4fa9-4f05-817c-5819ab4acaab",
             "source": {
-              "cell": "7e100f3f-4c87-4f22-93eb-e4fe5b0a358e"
+              "cell": "1ae71de3-41f4-41c4-8c31-eb0026eefbf9"
+            },
+            "target": {
+              "cell": "865a46cb-f8fb-400d-a185-c23f3ec03971"
+            },
+            "vertices": [
+              {
+                "x": 640,
+                "y": 300
+              },
+              {
+                "x": 550,
+                "y": 320
+              }
+            ],
+            "labels": [
+              "Query Response"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Query Response",
+              "description": "Message of the Day\nComments",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "ed5703d9-6459-4a82-a7cd-e2914498413f",
+                  "title": "Man-in-the-middle attack",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Intercepting sensitive info",
+                  "mitigation": "Encryption",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "4093a440-a670-42fd-8017-66471a9eb56c",
+            "source": {
+              "x": 690,
+              "y": 170
             },
             "target": {
               "cell": "81c2a3be-59ad-4a93-a427-86183d47a9ee"
             },
             "vertices": [
               {
-                "x": 340,
-                "y": 180
+                "x": 650,
+                "y": 120
+              },
+              {
+                "x": 580,
+                "y": 100
               }
             ],
             "labels": [
-              "Web Request"
+              "Query Response"
             ]
           },
           {
@@ -777,6 +807,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "test",
-    "threatTop": 9
+    "threatTop": 11
   }
 }
