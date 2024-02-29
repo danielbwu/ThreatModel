@@ -222,54 +222,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Web Request",
-              "description": "Login credentials\nComment submission",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": true,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "cb4c25ac-f9e1-4c7e-ab41-e54980962921",
-            "source": {
-              "cell": "7e100f3f-4c87-4f22-93eb-e4fe5b0a358e"
-            },
-            "target": {
-              "cell": "81c2a3be-59ad-4a93-a427-86183d47a9ee"
-            },
-            "vertices": [
-              {
-                "x": 340,
-                "y": 180
-              }
-            ],
-            "labels": [
-              "Web Request"
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Web Response",
               "description": "Message of the day\nComments\nerror response",
               "outOfScope": false,
@@ -296,49 +248,6 @@
             ],
             "labels": [
               "Web Response"
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Query",
-              "description": "Insert comments\nRetrieve comments\nRetrieve message of the day",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "fcf27fc1-8a57-4d1d-ad58-b248faabbb27",
-            "source": {
-              "x": 500,
-              "y": 150
-            },
-            "target": {
-              "cell": "1ae71de3-41f4-41c4-8c31-eb0026eefbf9"
-            },
-            "labels": [
-              "Query"
             ]
           },
           {
@@ -539,7 +448,7 @@
               },
               {
                 "x": 390,
-                "y": 270
+                "y": 250
               }
             ],
             "labels": [
@@ -587,15 +496,145 @@
             "vertices": [
               {
                 "x": 510,
-                "y": 270
-              },
-              {
-                "x": 510,
-                "y": 210
+                "y": 230
               }
             ],
             "labels": [
               "Authentication\nResponse"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Query",
+              "description": "Insert comments\nRetrieve comments\nRetrieve message of the day",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "82069445-27bd-4adf-9799-b23315ed7400",
+                  "title": "Injection Attack",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "SQL Injection",
+                  "mitigation": "Prepared statements\nSanitization\nValidation",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 8,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "fcf27fc1-8a57-4d1d-ad58-b248faabbb27",
+            "source": {
+              "x": 500,
+              "y": 150
+            },
+            "target": {
+              "cell": "1ae71de3-41f4-41c4-8c31-eb0026eefbf9"
+            },
+            "labels": [
+              "Query"
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Web Request",
+              "description": "Login credentials\nComment submission",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": true,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "6b77a883-8ad6-484a-ac9e-94900a9e231f",
+                  "title": "Injection Attack",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 6,
+                  "score": ""
+                },
+                {
+                  "id": "551f282f-3cfc-4282-9d7f-af0f94dd0fb8",
+                  "title": "Man-in-the-middle Attack",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Information disclosure",
+                  "description": "Sensitive data, such as credentials, intercepted in transit",
+                  "mitigation": "Encryption",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 9,
+                  "score": ""
+                }
+              ]
+            },
+            "id": "cb4c25ac-f9e1-4c7e-ab41-e54980962921",
+            "source": {
+              "cell": "7e100f3f-4c87-4f22-93eb-e4fe5b0a358e"
+            },
+            "target": {
+              "cell": "81c2a3be-59ad-4a93-a427-86183d47a9ee"
+            },
+            "vertices": [
+              {
+                "x": 340,
+                "y": 180
+              }
+            ],
+            "labels": [
+              "Web Request"
             ]
           },
           {
@@ -692,7 +731,7 @@
               "threats": [
                 {
                   "id": "912eed39-365f-492b-8149-4e1fd852fe6a",
-                  "title": "Vulnerabilities introduced by 3rd-party developers",
+                  "title": "Vulnerable and Outdated Components",
                   "status": "Open",
                   "severity": "Medium",
                   "type": "Tampering",
@@ -715,6 +754,19 @@
                   "new": false,
                   "number": 4,
                   "score": ""
+                },
+                {
+                  "id": "0588fba9-615d-4511-991a-7d3af3bbb69d",
+                  "title": "Elevation of Privilege",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Provide remediation for this threat or a reason if status is N/A",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 7,
+                  "score": ""
                 }
               ]
             }
@@ -725,6 +777,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "test",
-    "threatTop": 5
+    "threatTop": 9
   }
 }
