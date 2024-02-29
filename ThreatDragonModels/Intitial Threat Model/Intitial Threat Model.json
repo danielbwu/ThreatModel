@@ -233,7 +233,7 @@
               },
               {
                 "x": 390,
-                "y": 250
+                "y": 270
               }
             ],
             "labels": [
@@ -280,8 +280,12 @@
             },
             "vertices": [
               {
-                "x": 510,
-                "y": 230
+                "x": 490,
+                "y": 250
+              },
+              {
+                "x": 490,
+                "y": 220
               }
             ],
             "labels": [
@@ -382,59 +386,6 @@
             ],
             "labels": [
               "Web Response"
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Query Response",
-              "description": "Message of the day\nComments\nError",
-              "outOfScope": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "id": "f8e28856-1d9a-4577-9819-17f61e192588",
-            "source": {
-              "x": 690,
-              "y": 170
-            },
-            "target": {
-              "cell": "81c2a3be-59ad-4a93-a427-86183d47a9ee"
-            },
-            "vertices": [
-              {
-                "x": 670,
-                "y": 110
-              },
-              {
-                "x": 560,
-                "y": 110
-              }
-            ],
-            "labels": [
-              "Query Response"
             ]
           },
           {
@@ -581,6 +532,59 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Query Response",
+              "description": "Message of the Day\nComments",
+              "outOfScope": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "id": "4093a440-a670-42fd-8017-66471a9eb56c",
+            "source": {
+              "x": 690,
+              "y": 170
+            },
+            "target": {
+              "cell": "81c2a3be-59ad-4a93-a427-86183d47a9ee"
+            },
+            "vertices": [
+              {
+                "x": 650,
+                "y": 120
+              },
+              {
+                "x": 580,
+                "y": 100
+              }
+            ],
+            "labels": [
+              "Query Response"
+            ]
+          },
+          {
             "position": {
               "x": 635,
               "y": 170
@@ -651,8 +655,8 @@
                 "text": "Authenticator"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -666,12 +670,26 @@
               "description": "",
               "outOfScope": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "912eed39-365f-492b-8149-4e1fd852fe6a",
+                  "title": "Vulnerabilities introduced by 3rd-party developers",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Provide a description for this threat",
+                  "mitigation": "Risk transference ",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ]
             }
           }
         ],
@@ -680,6 +698,6 @@
     ],
     "diagramTop": 2,
     "reviewer": "test",
-    "threatTop": 2
+    "threatTop": 3
   }
 }
